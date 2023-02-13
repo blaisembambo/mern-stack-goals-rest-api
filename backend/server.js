@@ -1,10 +1,12 @@
 const express = require('express')
 const dotenv = require('dotenv').config()
 const { errorHandler } = require('./middleware/errorMiddleware')
+const mongoDB = require('./config/db')
 
 
 const port = process.env.PORT || 4000
 const app = express()
+mongoDB()
 
 
 
